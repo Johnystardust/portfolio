@@ -1,0 +1,275 @@
+#single-portfolio-container
+  margin-left: 60px
+
+  .single-item-head
+    position: relative
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+
+    .intro-section
+      display: none
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      z-index: 10
+      text-align: center
+
+      .intro-title
+        color: #ffffff
+        font-size: 60px
+        font-weight: 500
+        text-transform: uppercase
+      .divider
+        width: 100px
+        margin: 50px auto
+        border-color: #ffffff
+      .category
+        color: #ffffff
+        font-size: 50px
+        font-weight: 300
+        text-transform: uppercase
+
+      .intro-menu
+        width: 712px
+        height: 66px
+        margin: 50px auto auto auto
+        .intro-menu-item
+          position: relative
+          width: 200px
+          margin-left: 50px
+          border: 2px solid #ffffff
+          float: left
+          a
+            display: block
+            padding: 20px
+            text-decoration: none
+            text-transform: uppercase
+            color: #ffffff
+            -webkit-transition: .3s ease-in-out
+            -moz-transition: .3s ease-in-out
+            -o-transition: .3s ease-in-out
+            transition: .3s ease-in-out
+          .txt
+            position: relative
+            z-index: 10
+            i
+              margin-right: 9px
+          .bg
+            position: absolute
+            width: 0%
+            height: 100%
+            top: 0
+            left: 0
+            background-color: #ffffff
+            -webkit-transition: .3s ease-in-out
+            -moz-transition: .3s ease-in-out
+            -o-transition: .3s ease-in-out
+            transition: .3s ease-in-out
+        .intro-menu-item:first-child
+          margin-left: 0
+        .intro-menu-item:hover
+          a
+            color: #000000
+          .bg
+            width: 100%
+    .overlay
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background-color: rgba(0,0,0,0.6)
+      opacity: 1
+      z-index: 1
+      -webkit-transition: .3s ease-in-out
+      -moz-transition: .3s ease-in-out
+      -o-transition: .3s ease-in-out
+      transition: .3s ease-in-out
+
+  .single-item-case
+    display: block
+
+    .case-section
+      display: inline-block
+      position: relative
+      padding: 0 50px
+      margin-top: 100px
+      .section-item
+        margin-top: 100px
+        opacity: 0
+        -webkit-transition: .3s ease-in-out
+        -moz-transition: .3s ease-in-out
+        -o-transition: .3s ease-in-out
+        transition: .3s ease-in-out
+      .section-item:first-child
+        margin-top: 0
+      .text
+        position: relative
+        width: 60%
+        margin-left: 20%
+        .title
+          h1
+            text-align: center
+            text-transform: uppercase
+            font-size: 52px
+            font-weight: 500
+          hr
+            margin: 50px auto
+            max-width: 100px
+            border-color: #000000
+
+        p
+          font-size: 18px
+          font-weight: 300
+          margin-top: 20px
+          line-height: 32px
+          letter-spacing: 1px
+      .image
+        position: relative
+        width: 80%
+        margin-left: 10%
+        img
+          width: 100%
+      .cards
+        position: relative
+        width: 60%
+        height: 213px
+        margin-left: 20%
+        .card-wrap
+          position: relative
+          width: 33.333%
+          float: left
+          .card
+            display: table
+            position: relative
+            width: 150px
+            height: 150px
+            margin: 0 auto
+            border-radius: 150px
+            background-color: #f7a501
+            .card-inner
+              display: table-cell
+              vertical-align: middle
+              font-size: 52px
+              text-align: center
+              color: #ffffff
+          h2
+            margin-top: 20px
+            font-size: 32px
+            font-weight: 300
+            text-align: center
+      .quote
+        position: relative
+        width: 60%
+        margin-left: 20%
+        h1
+          font-size: 38px
+          font-weight: 300
+
+
+
+
+
+    // CASE SECTION REVIEW
+    .case-section-review
+      padding: 100px 50px
+
+      .text
+        position: relative
+        z-index: 10
+        .title
+          h1
+            color: #ffffff
+          hr
+            border-color: #ffffff
+        p
+          color: #ffffff
+        hr
+          max-width: 100px
+          border-color: #ffffff
+
+      .review-author
+        color: #ffffff
+        font-size: 18px
+        font-weight: 500
+        margin-top: 20px
+        line-height: 32px
+        letter-spacing: 1px
+        text-shadow: 1px 1px #666
+
+      .overlay-review
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 0
+        left: 0
+        background-color: rgba(0,0,0,0.6)
+        opacity: 1
+        z-index: 1
+
+  // CASE SECTION MENU
+  .single-case-menu
+    display: block
+    width: 100%
+    height: 62px
+    .case-menu-item
+      position: relative
+      width: 25%
+      top: 0
+      float: left
+      text-align: center
+      z-index: 10
+      -webkit-transition: .3s ease-in-out
+      -moz-transition: .3s ease-in-out
+      -o-transition: .3s ease-in-out
+      transition: .3s ease-in-out
+      a
+        display: block
+        position: relative
+        padding: 20px
+        height: 22px
+        text-decoration: none
+        text-transform: uppercase
+        background-color: #ffffff
+        border-left: 1px solid rgba(0, 0, 0, 0.5)
+        color: #000000
+        -webkit-transition: .3s ease-in-out
+        -moz-transition: .3s ease-in-out
+        -o-transition: .3s ease-in-out
+        transition: .3s ease-in-out
+      a:first-child
+        border-left: none
+      .txt
+        position: relative
+        z-index: 10
+      .bg
+        position: absolute
+        width: 0%
+        height: 100%
+        top: 0
+        left: 0
+        background-color: $blue
+        -webkit-transition: .3s ease-in-out
+        -moz-transition: .3s ease-in-out
+        -o-transition: .3s ease-in-out
+        transition: .3s ease-in-out
+    .no-link
+      a
+        color: #b5b5b5 !important
+    .case-menu-item:hover
+      top: -10px
+      a
+        height: 32px
+        color: #ffffff
+      .bg
+        width: 100%
+    .no-link:hover
+      top: 0px
+      a
+        height: 22px
+        color: #b5b5b5
+      .bg
+        width: 0% !important
