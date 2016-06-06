@@ -13,7 +13,9 @@ $(document).ready(function(){
 
     var singlePortfolioContainer    = $('#single-portfolio-container');
     var portfolioContainer          = $('.portfolio-container');
+    var skillsContainer             = $('#skills-container');
     var scrollableContainer         = $('.scrollable-container');
+    var scrollableItem              = $('.scrollable-item');
     var portfolioItem               = $('.portfolio-item');
     var portfolioItemOpen           = $('.portfolio-item-open');
 
@@ -30,6 +32,7 @@ $(document).ready(function(){
         var containerWidth = windowWidth - 60;
 
         singlePortfolioContainer.width(containerWidth);
+        skillsContainer.width(containerWidth);
 
         portfolioContainer.height(windowHeight);
 
@@ -58,10 +61,10 @@ $(document).ready(function(){
         //portfolioContainer.niceScroll({zindex: 2000});
 
         // Set the portfolioItem
-        portfolioItem.css('width', itemWidth);
+        scrollableItem.css('width', itemWidth);
 
         var i = 0;
-        portfolioContainer.find(portfolioItem).each(function(){
+        portfolioContainer.find(scrollableItem).each(function(){
             $(this).css('left', i * itemWidth);
             i++;
         });
@@ -123,13 +126,52 @@ $(document).ready(function(){
         return false;
     });
 
+    /*
+     |-----------------------------------------------------------------------------------------------------------------------
+     |   Go To Top
+     |-----------------------------------------------------------------------------------------------------------------------
+     */
+    var $scroll_top = $('#go-to-top');
+    $scroll_top.hide();
 
+    // Scroll to top fadeIn/fadeOut
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > (windowHeight -50)) {
+            $scroll_top.removeClass('fadeOutDown');
+            $scroll_top.addClass('fadeInDown');
+            $scroll_top.show();
+        } else {
+            $scroll_top.removeClass('fadeInDown');
+            $scroll_top.addClass('fadeOutDown');
+        }
+    });
+
+    // Scroll to top
+    $scroll_top.click(function(){
+        $("html, body").animate({ scrollTop: 0 },600);
+        return false;
+    });
+
+    /*
+     |-----------------------------------------------------------------------------------------------------------------------
+     |   Open The Menu
+     |-----------------------------------------------------------------------------------------------------------------------
+     */
     $('.menu-icon').click(function(){
         // Add the class to the mobile hoofdmenu
         $('.main-menu').toggleClass('main-menu-open');
 
         // Add the class to the menu icon
         $(this).toggleClass('open');
+    });
+
+    /*
+     |-----------------------------------------------------------------------------------------------------------------------
+     |   Add Icons To Footer Menu
+     |-----------------------------------------------------------------------------------------------------------------------
+     */
+    $('footer').find('.widget_nav_menu').each(function(){
+        $(this).find('a').prepend('<i class="icon icon-angle-right"></i>');
     });
 
 });

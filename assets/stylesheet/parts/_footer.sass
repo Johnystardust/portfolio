@@ -1,6 +1,55 @@
 footer
-  height: 500px
+  position: relative
+  display: block
+  height: 300px
+  padding: 50px 0
   margin-left: 60px
-  background-color: #222222
-  border-left: 5px solid #333333
+  margin-top: 62px
+  background-color: $grey
+  border-left: 5px solid $light-grey
+
+  .footer-column
+    display: inline-block
+    position: relative
+    width: 25%
+    float: left
+    .column-inner
+      margin: 0 50px
+      color: #999999
+      .title
+        color: #999999
+        font-size: 26px
+        font-weight: 500
+        padding-bottom: 20px
+
+      .textwidget
+        font-weight: 300
+        line-height: 26px
+        letter-spacing: 0.5px
+
+  .widget_nav_menu
+    ul
+      list-style-type: none
+      li
+        line-height: 26px
+        margin-top: 7px
+        a
+          position: relative
+          left: 0
+          color: #999999
+          text-decoration: none
+          font-weight: 300
+          letter-spacing: 0.5px
+          -webkit-transition: .3s ease-in-out
+          -moz-transition: .3s ease-in-out
+          -o-transition: .3s ease-in-out
+          transition: .3s ease-in-out
+      li:first-child
+        margin-top: 0
+      li:hover
+        a
+          color: $blue
+          left: 10px
+
+
 

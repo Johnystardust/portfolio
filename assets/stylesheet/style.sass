@@ -1,7 +1,15 @@
 $primary-color : #EF6A1B
 
-$grey : #c9c9c9
-$light-grey : #e3e3e3
+// LIGHT GREY COLORS
+//$grey : #c9c9c9
+//$light-grey : #e3e3e3
+//$light-blue : #9ad3de
+//$blue : #89bdd3
+
+// DARK GREY COLORS
+
+$grey : #222222
+$light-grey : #333333
 $light-blue : #9ad3de
 $blue : #89bdd3
 
@@ -12,6 +20,43 @@ $blue : #89bdd3
 
 html
   overflow: hidden !important
+
+.page-header
+  position: relative
+  width: 100%
+  height: 500px
+  overflow: hidden
+  .overlay
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    background-color: rgba(0,0,0,0.3)
+    .title
+      h1
+        text-align: center
+        color: #ffffff
+        font-size: 52px
+        font-weight: 500
+      hr
+        margin: 50px auto
+        max-width: 100px
+        border-color: #ffffff
+    .quote
+      padding: 0 120px
+      p
+        text-align: center
+        color: #ffffff
+        font-size: 28px
+        font-weight: 300
+        letter-spacing: 1px
+      .quote-author
+        font-size: 18px
+
+  img
+    width: 100%
+
 
 .middle-wrap
   width: 100%
@@ -24,11 +69,44 @@ html
   display: table-cell
   vertical-align: middle
 
+#go-to-top
+  display: table
+  position: fixed
+  width: 40px
+  height: 40px
+  right: 20px
+  bottom: 20px
+  z-index: 4000
+  cursor: pointer
+  border-radius: 40px
+  border: 1px solid rgba(0,0,0,0.1)
+  background-color: $blue
+  -webkit-transition: .3s ease-in-out
+  -moz-transition: .3s ease-in-out
+  -o-transition: .3s ease-in-out
+  transition: .3s ease-in-out
+  i
+    position: relative
+    top: 0
+    display: table-cell
+    vertical-align: middle
+    text-align: center
+    font-size: 17px
+    color: #ffffff
+    -webkit-transition: .3s ease-in-out
+    -moz-transition: .3s ease-in-out
+    -o-transition: .3s ease-in-out
+    transition: .3s ease-in-out
+#go-to-top:hover
+  background-color: $light-blue
+  i
+    top: -5px
 
 @import "parts/nav"
 @import "parts/footer"
 @import "parts/portfolio"
 @import "parts/portfolio-single"
+@import "parts/skills"
 
 
 

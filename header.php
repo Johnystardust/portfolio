@@ -22,7 +22,12 @@
 <body>
 
 <div class="wrapper">
-    <div class="menu-container">
+
+    <div id="go-to-top" class="animated">
+        <i class="icon-up-open"></i>
+    </div>
+
+    <div id="menu-container">
         <div class="menu-icon-wrapper">
             <div class="menu-icon">
                 <span></span>

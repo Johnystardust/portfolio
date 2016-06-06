@@ -18,6 +18,23 @@ $(document).ready(function(){
         })
     });
 
+
+
+    $('.skills-section').find('.skill').each(function(element){
+
+        var id = $(this).attr('id');
+        var width = $(this).attr('data-completion');
+
+
+        new Waypoint({
+            element: $('#'+id),
+            offset: '70%',
+            handler: function(direction){
+                $('#'+id).find('.fill').css('width', width);
+            }
+        })
+    });
+
 });
 
 

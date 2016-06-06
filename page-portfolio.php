@@ -34,7 +34,7 @@ get_header();
                 }
                 ?>
 
-                <div class="portfolio-item">
+                <div class="scrollable-item portfolio-item">
 
                     <div class="item-head" style="background-image: url(<?php echo $image[0]; ?>);">
                         <div class="intro-section">
@@ -62,6 +62,13 @@ get_header();
 
             <?php
             endwhile;
+            ?>
+
+            <div class="scrollable-item footer-item">
+                <?php get_footer(); ?>
+            </div>
+
+            <?php
         }
 
         /*
@@ -84,5 +91,4 @@ get_header();
     </div>
 </div>
 
-<?php get_footer(); ?>
 
