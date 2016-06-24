@@ -14,6 +14,7 @@ $(document).ready(function(){
     var singlePortfolioContainer    = $('#single-portfolio-container');
     var portfolioContainer          = $('.portfolio-container');
     var skillsContainer             = $('#skills-container');
+    var contactContainer            = $('#contact-container');
     var scrollableContainer         = $('.scrollable-container');
     var scrollableItem              = $('.scrollable-item');
     var portfolioItem               = $('.portfolio-item');
@@ -33,6 +34,7 @@ $(document).ready(function(){
 
         singlePortfolioContainer.width(containerWidth);
         skillsContainer.width(containerWidth);
+        contactContainer.width(containerWidth);
 
         portfolioContainer.height(windowHeight);
 
