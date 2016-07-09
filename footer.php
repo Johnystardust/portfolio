@@ -7,8 +7,10 @@
 ?>
 </div> <!-- Wrapper closing tag -->
 
-<footer>
-    <?php dynamic_sidebar('footer'); ?>
+<footer class="container-fluid">
+    <div class="row">
+        <?php dynamic_sidebar('footer'); ?>
+    </div>
 </footer>
 
 <!-- Enqueue all the styles & scripts in the footer -->

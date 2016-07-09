@@ -1,0 +1,93 @@
+.button-black
+  position: relative
+  width: 200px
+  height: 44px
+  display: table
+  border: 1px solid $grey
+  text-align: center
+  cursor: pointer
+  line-height: normal
+  font-size: 14px
+  .txt
+    display: table-cell
+    vertical-align: middle
+    position: relative
+    z-index: 1000
+    text-transform: uppercase
+    color: $grey
+    font-weight: 300
+    -webkit-transition: color 0.3s ease-in-out
+    -moz-transition: color 0.3s ease-in-out
+    -o-transition: color 0.3s ease-in-out
+    transition: color 0.3s ease-in-out
+    input
+      background: none
+      border: none
+      text-transform: uppercase
+      color: inherit
+      width: 100%
+      height: 100%
+  .bg
+    position: absolute
+    background: $grey
+    top: 0
+    left: 0
+    width: 0%
+    height: 100%
+    -webkit-transition: width 0.3s ease-in-out
+    -moz-transition: width 0.3s ease-in-out
+    -o-transition: width 0.3s ease-in-out
+    transition: width 0.3s ease-in-out
+.button-black:hover
+  text-decoration: none
+  .txt
+    color: #ffffff
+  .bg
+    width: 100%
+
+.button-white
+  position: relative
+  width: 200px
+  height: 44px
+  display: table
+  border: 1px solid #ffffff
+  text-align: center
+  cursor: pointer
+  line-height: normal
+  font-size: 14px
+  .txt
+    display: table-cell
+    vertical-align: middle
+    position: relative
+    z-index: 1000
+    text-transform: uppercase
+    color: #ffffff
+    font-weight: 300
+    -webkit-transition: color 0.3s ease-in-out
+    -moz-transition: color 0.3s ease-in-out
+    -o-transition: color 0.3s ease-in-out
+    transition: color 0.3s ease-in-out
+    input
+      background: none
+      border: none
+      text-transform: uppercase
+      color: inherit
+      width: 100%
+      height: 100%
+  .bg
+    position: absolute
+    background: #ffffff
+    top: 0
+    left: 0
+    width: 0%
+    height: 100%
+    -webkit-transition: width 0.3s ease-in-out
+    -moz-transition: width 0.3s ease-in-out
+    -o-transition: width 0.3s ease-in-out
+    transition: width 0.3s ease-in-out
+.button-white:hover
+  text-decoration: none
+  .txt
+    color: $grey
+  .bg
+    width: 100%

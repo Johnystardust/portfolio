@@ -42,7 +42,7 @@ get_header();
                                 <div class="middle-wrap-inner">
                                     <h1 class="intro-title animated"><?php echo the_title(); ?></h1>
                                     <hr class="divider animated"/>
-                                    <h2 class="category animated">Website</h2>
+                                    <h3 class="category animated">Website</h3>
 
                                     <div class="intro-menu">
                                         <div class="intro-menu-item view-case animated">

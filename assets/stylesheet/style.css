@@ -7,7 +7,8 @@ h1 {
 h3 {
   font-size: 38px;
   font-family: "Open Sans", sans-serif;
-  margin: 0; }
+  margin: 0;
+  font-weight: 300; }
 
 p {
   font-size: 18px;
@@ -23,58 +24,13 @@ p {
 html {
   overflow: hidden !important; }
 
+.no-padding {
+  padding: 0; }
+
 .divider {
   margin: 50px auto;
   max-width: 100px;
   border-color: #000000; }
-
-.button-black {
-  position: relative;
-  width: 200px;
-  height: 44px;
-  display: table;
-  border: 1px solid #222222;
-  text-align: center;
-  cursor: pointer;
-  line-height: normal;
-  font-size: 14px; }
-  .button-black .txt {
-    display: table-cell;
-    vertical-align: middle;
-    position: relative;
-    z-index: 1000;
-    text-transform: uppercase;
-    color: #222222;
-    font-weight: 300;
-    -webkit-transition: color 0.3s ease-in-out;
-    -moz-transition: color 0.3s ease-in-out;
-    -o-transition: color 0.3s ease-in-out;
-    transition: color 0.3s ease-in-out; }
-    .button-black .txt input {
-      background: none;
-      border: none;
-      text-transform: uppercase;
-      color: inherit;
-      width: 100%;
-      height: 100%; }
-  .button-black .bg {
-    position: absolute;
-    background: #222222;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    -webkit-transition: width 0.3s ease-in-out;
-    -moz-transition: width 0.3s ease-in-out;
-    -o-transition: width 0.3s ease-in-out;
-    transition: width 0.3s ease-in-out; }
-
-.button-black:hover {
-  text-decoration: none; }
-  .button-black:hover .txt {
-    color: #ffffff; }
-  .button-black:hover .bg {
-    width: 100%; }
 
 #page-header {
   position: relative;
@@ -154,6 +110,102 @@ html {
   background-color: #9ad3de; }
   #go-to-top:hover i {
     top: -5px; }
+
+.button-black {
+  position: relative;
+  width: 200px;
+  height: 44px;
+  display: table;
+  border: 1px solid #222222;
+  text-align: center;
+  cursor: pointer;
+  line-height: normal;
+  font-size: 14px; }
+  .button-black .txt {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1000;
+    text-transform: uppercase;
+    color: #222222;
+    font-weight: 300;
+    -webkit-transition: color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out; }
+    .button-black .txt input {
+      background: none;
+      border: none;
+      text-transform: uppercase;
+      color: inherit;
+      width: 100%;
+      height: 100%; }
+  .button-black .bg {
+    position: absolute;
+    background: #222222;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    -webkit-transition: width 0.3s ease-in-out;
+    -moz-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out; }
+
+.button-black:hover {
+  text-decoration: none; }
+  .button-black:hover .txt {
+    color: #ffffff; }
+  .button-black:hover .bg {
+    width: 100%; }
+
+.button-white {
+  position: relative;
+  width: 200px;
+  height: 44px;
+  display: table;
+  border: 1px solid #ffffff;
+  text-align: center;
+  cursor: pointer;
+  line-height: normal;
+  font-size: 14px; }
+  .button-white .txt {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1000;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 300;
+    -webkit-transition: color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out; }
+    .button-white .txt input {
+      background: none;
+      border: none;
+      text-transform: uppercase;
+      color: inherit;
+      width: 100%;
+      height: 100%; }
+  .button-white .bg {
+    position: absolute;
+    background: #ffffff;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    -webkit-transition: width 0.3s ease-in-out;
+    -moz-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out; }
+
+.button-white:hover {
+  text-decoration: none; }
+  .button-white:hover .txt {
+    color: #222222; }
+  .button-white:hover .bg {
+    width: 100%; }
 
 #menu-container {
   position: fixed;
@@ -788,5 +840,89 @@ footer {
     border-radius: 0;
     border: 1px solid #222222;
     outline: none; }
+
+#call-back {
+  position: relative;
+  background: #222222;
+  padding: 50px 15px; }
+  #call-back .call-back-inner {
+    display: table;
+    margin: 0 auto;
+    position: relative; }
+    #call-back .call-back-inner h3 {
+      color: #ffffff;
+      float: left;
+      line-height: 52px; }
+    #call-back .call-back-inner .button-white {
+      float: left;
+      margin-left: 50px;
+      height: 52px; }
+  #call-back .call-back-form {
+    max-width: 60%;
+    margin: 0 auto; }
+    #call-back .call-back-form p {
+      margin: 0; }
+    #call-back .call-back-form .form-group {
+      margin-bottom: 0; }
+    #call-back .call-back-form .form-control {
+      background: #222222;
+      color: #ffffff;
+      border: 1px solid #666;
+      border-radius: 0;
+      padding: 25px 15px;
+      outline: none; }
+    #call-back .call-back-form .form-control:focus {
+      border-color: #ffffff;
+      -webkit-box-shadow: inset 0 1px 1px rgba(220, 220, 220, 0.7);
+      -moz-box-shadow: inset 0 1px 1px rgba(220, 220, 220, 0.7);
+      -o-box-shadow: inset 0 1px 1px rgba(220, 220, 220, 0.7);
+      box-shadow: inset 0 1px 1px rgba(220, 220, 220, 0.7); }
+    #call-back .call-back-form .button-white {
+      height: 52px; }
+  #call-back .close-button {
+    width: 52px;
+    height: 52px;
+    display: table;
+    border: 1px solid #ffffff;
+    text-align: center;
+    cursor: pointer; }
+    #call-back .close-button i {
+      display: table-cell;
+      vertical-align: middle;
+      position: relative;
+      z-index: 1000;
+      color: #ffffff;
+      font-weight: 300;
+      -webkit-transition: color 0.3s ease-in-out;
+      -moz-transition: color 0.3s ease-in-out;
+      -o-transition: color 0.3s ease-in-out;
+      transition: color 0.3s ease-in-out; }
+    #call-back .close-button .bg {
+      position: absolute;
+      background: #ffffff;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      -webkit-transition: width 0.3s ease-in-out;
+      -moz-transition: width 0.3s ease-in-out;
+      -o-transition: width 0.3s ease-in-out;
+      transition: width 0.3s ease-in-out; }
+  #call-back .close-button:hover i {
+    color: #000000; }
+  #call-back .close-button:hover .bg {
+    width: 100%; }
+  #call-back .button-callback {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    top: 50px;
+    right: 50px; }
+  #call-back .wpcf7-not-valid {
+    border-color: #ff0000 !important; }
+  #call-back .wpcf7-response-output {
+    display: none; }
+  #call-back .wpcf7-validation-errors {
+    display: none; }
 
 /*# sourceMappingURL=style.css.map */

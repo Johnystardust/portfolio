@@ -176,4 +176,68 @@ $(document).ready(function(){
         $(this).find('a').prepend('<i class="icon icon-angle-right"></i>');
     });
 
+    /*
+     |-------------------------------------------------------------------------------------------------------------------
+     |   Call Back Function
+     |-------------------------------------------------------------------------------------------------------------------
+     */
+    var $form_callback      = $('.call-back-form');
+    var $button_callback    = $('.button-callback');
+    var $inner_callback     = $('.call-back-inner');
+
+    $form_callback.hide();
+    $button_callback.hide();
+
+    /*
+     |----------------------------------------------------------------
+     |   Show the callback form.
+     |----------------------------------------------------------------
+     */
+    $('#call-back-activate').click(function(){
+        // Start the animation to slide the intro out
+        $inner_callback.addClass('bounceOutRight');
+
+        setTimeout(function(){
+            // After the intro animation is stopped hide and remove the element's class
+            $inner_callback.hide();
+            $inner_callback.removeClass('bounceOutRight');
+
+            // Show the form and add the animation class
+            $form_callback.show();
+            $form_callback.addClass('bounceInLeft');
+            $button_callback.show();
+            $button_callback.addClass('bounceInRight');
+        }, 300);
+
+        return false;
+    });
+
+    /*
+     |----------------------------------------------------------------
+     |   Hide the callback form.
+     |----------------------------------------------------------------
+     */
+    $button_callback.click(function(){
+        // Remove the animation class from the form
+        $form_callback.removeClass('bounceInLeft');
+        $button_callback.removeClass('bounceInRight');
+
+        // Add the new animation class to the form
+        $form_callback.addClass('bounceOutLeft');
+        $button_callback.addClass('bounceOutRight');
+
+        setTimeout(function(){
+            // After the intro animation is stopped hide and remove the element's class
+            $form_callback.hide();
+            $form_callback.removeClass('bounceOutLeft');
+            $button_callback.hide();
+            $button_callback.removeClass('bounceOutRight');
+
+            // Add the new animation class to the element and show it
+            $inner_callback.show();
+            $inner_callback.addClass('bounceInRight');
+        }, 300);
+
+        return false;
+    });
 });

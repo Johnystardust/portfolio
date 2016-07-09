@@ -13,3 +13,95 @@
     border-radius: 0
     border: 1px solid $grey
     outline: none
+
+#call-back
+  position: relative
+  background: $grey
+  padding: 50px 15px
+  .call-back-inner
+    display: table
+    margin: 0 auto
+    position: relative
+    h3
+      color: #ffffff
+      float: left
+      line-height: 52px
+    .button-white
+      float: left
+      margin-left: 50px
+      height: 52px
+
+  .call-back-form
+    max-width: 60%
+    margin: 0 auto
+    p
+      margin: 0
+
+    .form-group
+      margin-bottom: 0
+
+    .form-control
+      background: $grey
+      color: #ffffff
+      border: 1px solid #666
+      border-radius: 0
+      padding: 25px 15px
+      outline: none
+    .form-control:focus
+      border-color: #ffffff
+      -webkit-box-shadow: inset 0 1px 1px rgba(220, 220, 220, 0.7)
+      -moz-box-shadow: inset 0 1px 1px rgba(220, 220, 220, 0.7)
+      -o-box-shadow: inset 0 1px 1px rgba(220, 220, 220, 0.7)
+      box-shadow: inset 0 1px 1px rgba(220, 220, 220, 0.7)
+    .button-white
+      height: 52px
+
+  .close-button
+    width: 52px
+    height: 52px
+    display: table
+    border: 1px solid #ffffff
+    text-align: center
+    cursor: pointer
+    i
+      display: table-cell
+      vertical-align: middle
+      position: relative
+      z-index: 1000
+      color: #ffffff
+      font-weight: 300
+      -webkit-transition: color 0.3s ease-in-out
+      -moz-transition: color 0.3s ease-in-out
+      -o-transition: color 0.3s ease-in-out
+      transition: color 0.3s ease-in-out
+    .bg
+      position: absolute
+      background: #ffffff
+      top: 0
+      left: 0
+      width: 0%
+      height: 100%
+      -webkit-transition: width 0.3s ease-in-out
+      -moz-transition: width 0.3s ease-in-out
+      -o-transition: width 0.3s ease-in-out
+      transition: width 0.3s ease-in-out
+  .close-button:hover
+    i
+      color: #000000
+    .bg
+      width: 100%
+
+  .button-callback
+    position: absolute
+    width: 52px
+    height: 52px
+    top: 50px
+    right: 50px
+
+
+  .wpcf7-not-valid
+    border-color: #ff0000 !important
+  .wpcf7-response-output
+    display: none
+  .wpcf7-validation-errors
+    display: none

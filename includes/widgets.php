@@ -15,8 +15,8 @@ function tvds_add_widgets_init(){
         'name' 			=> __( 'Footer', 'portfolio' ),
         'id' 			=> 'footer',
         'description' 	=> __( 'Footer ruimte', 'portfolio' ),
-        'before_widget' => '<div id="%1$s" class="%2$s footer-column"><div class="column-inner">',
-        'after_widget' 	=> '</div></div>',
+        'before_widget' => '<div id="%1$s" class="%2$s col-md-3">',
+        'after_widget' 	=> '</div>',
         'before_title' 	=> '<h2 class="title">',
         'after_title' 	=> '</h2></<hr/>',
     ));
