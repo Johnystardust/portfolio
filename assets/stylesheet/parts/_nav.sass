@@ -41,20 +41,19 @@
         left: 0
         width: 0%
         height: 100%
-        background-color: $blue
+        background-color: $light-grey
         -webkit-transition: .3s ease-in-out
         -moz-transition: .3s ease-in-out
         -o-transition: .3s ease-in-out
         transition: .3s ease-in-out
     li:hover
+      a
+        color: $hover-color
       .bg
         width: 100%
 
-
-
 .main-menu-open
   left: 60px
-
 
 .menu-icon-wrapper
   position: relative
@@ -93,7 +92,7 @@
 
   .menu-icon:hover
     span
-      background-color: $blue
+      background-color: $hover-color
 
   .open
     span:nth-child(1)
@@ -113,3 +112,39 @@
       -moz-transform: rotate(-135deg)
       -o-transform: rotate(-135deg)
       transform: rotate(-135deg)
+
+  .menu-social
+    position: absolute
+    bottom: 0
+    width: 100%
+    ul
+      margin-bottom: 0
+      li
+        position: relative
+        padding: 15px 0
+        a
+          position: relative
+          z-index: 2
+          color: #ffffff
+          display: block
+          text-align: center
+        .bg
+          position: absolute
+          top: 0
+          left: 0
+          width: 0%
+          height: 100%
+          z-index: 1
+          background-color: $light-grey
+          -webkit-transition: .3s ease-in-out
+          -moz-transition: .3s ease-in-out
+          -o-transition: .3s ease-in-out
+          transition: .3s ease-in-out
+      li:hover
+        a
+          color: $hover-color
+        .bg
+          width: 100%
+
+
+

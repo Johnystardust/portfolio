@@ -34,6 +34,15 @@
                 <span></span>
                 <span></span>
             </div>
+
+            <div class="menu-social">
+                <ul>
+                    <li><a href="#"><i class="icon-facebook"></i></a><span class="bg"></span></li>
+                    <li><a href="#"><i class="icon-linkedin"></i></a><span class="bg"></span></li>
+                    <li><a href="#"><i class="icon-youtube"></i></a><span class="bg"></span></li>
+                    <li><a href="#"><i class="icon-twitter"></i></a><span class="bg"></span></li>
+                </ul>
+            </div>
         </div>
 
         <div class="main-menu">
