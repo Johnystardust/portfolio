@@ -13,6 +13,24 @@ $light-grey : #333333
 $light-blue : #9ad3de
 $blue : #89bdd3
 
+// Typography
+h1
+  font-size: 52px
+  font-family: 'Open Sans', sans-serif
+  margin: 0
+  font-weight: 500
+h3
+  font-size: 38px
+  font-family: 'Open Sans', sans-serif
+  margin: 0
+p
+  font-size: 18px
+  font-weight: 300
+  line-height: 32px
+  letter-spacing: 1px
+
+
+// Miscellaneous
 *
   margin: 0
   padding: 0
@@ -21,11 +39,67 @@ $blue : #89bdd3
 html
   overflow: hidden !important
 
-.page-header
+.divider
+  margin: 50px auto
+  max-width: 100px
+  border-color: #000000
+
+.button-black
+  position: relative
+  width: 200px
+  height: 44px
+  display: table
+  border: 1px solid $grey
+  text-align: center
+  cursor: pointer
+  line-height: normal
+  font-size: 14px
+  .txt
+    display: table-cell
+    vertical-align: middle
+    position: relative
+    z-index: 1000
+    text-transform: uppercase
+    color: $grey
+    font-weight: 300
+    -webkit-transition: color 0.3s ease-in-out
+    -moz-transition: color 0.3s ease-in-out
+    -o-transition: color 0.3s ease-in-out
+    transition: color 0.3s ease-in-out
+    input
+      background: none
+      border: none
+      text-transform: uppercase
+      color: inherit
+      width: 100%
+      height: 100%
+  .bg
+    position: absolute
+    background: $grey
+    top: 0
+    left: 0
+    width: 0%
+    height: 100%
+    -webkit-transition: width 0.3s ease-in-out
+    -moz-transition: width 0.3s ease-in-out
+    -o-transition: width 0.3s ease-in-out
+    transition: width 0.3s ease-in-out
+.button-black:hover
+  text-decoration: none
+  .txt
+    color: #ffffff
+  .bg
+    width: 100%
+
+
+
+#page-header
   position: relative
   width: 100%
   height: 500px
   overflow: hidden
+  padding: 0
+  margin-bottom: 100px
   .overlay
     position: absolute
     width: 100%
@@ -56,6 +130,9 @@ html
 
   img
     width: 100%
+
+#page-container
+  margin-left: 60px
 
 
 .middle-wrap

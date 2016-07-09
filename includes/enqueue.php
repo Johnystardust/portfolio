@@ -38,11 +38,13 @@ function add_my_custom_scripts(){
 add_action('wp_enqueue_scripts', 'add_my_custom_styles');
 function add_my_custom_styles(){
     // register styles
+    wp_register_style('bootstrap', get_stylesheet_directory_uri().'/assets/bootstrap/css/bootstrap.css');
     wp_register_style('stylesheet', get_stylesheet_directory_uri().'/assets/stylesheet/style.css');
     wp_register_style('fontello', get_stylesheet_directory_uri().'/assets/fontello/fontello-embedded.css');
     wp_register_style('animate', get_stylesheet_directory_uri().'/assets/animate/animate.css');
 
     // enqueue styles
+    wp_enqueue_style('bootstrap');
     wp_enqueue_style('stylesheet');
     wp_enqueue_style('fontello');
     wp_enqueue_style('animate');
