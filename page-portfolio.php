@@ -36,7 +36,7 @@ get_header();
                 <div class="portfolio-item row" style="background-image: url(<?php echo $image[0]; ?>);">
                     <div class="middle-wrap">
                         <div class="middle-wrap-inner">
-                            <div class="intro-section">
+                            <div class="intro-section-portfolio">
                                 <div class="intro-title">
                                     <h1 class="title animated"><?php echo the_title(); ?></h1>
                                     <hr class="divider animated"/>

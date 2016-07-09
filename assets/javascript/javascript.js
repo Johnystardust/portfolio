@@ -32,21 +32,28 @@ $(document).ready(function(){
      */
     var portfolioItem = $('.portfolio-item');
 
+    portfolioItem.find('.intro-section-portfolio').hide();
+    portfolioItem.find('.overlay').addClass('overlay-hide');
+
+
     portfolioItem.hover(function() {
         portfolioItem.not(this).each(function () {
-            $(this).find('.intro-section').stop().fadeOut();
+            $(this).find('.intro-section-portfolio').stop().fadeOut();
 
             $(this).find('.overlay').addClass('overlay-hide');
         });
 
         $(this).find('.overlay').removeClass('overlay-hide');
 
-        $(this).find('.intro-section').stop().fadeIn();
+        $(this).find('.intro-section-portfolio').stop().fadeIn();
         $(this).find('.intro-menu').addClass('fadeInUp');
         $(this).find('.title').addClass('fadeInUp');
         $(this).find('.divider').addClass('fadeInUp');
 
         $(this).find('.category').addClass('fadeInUp');
+    }, function(){
+        portfolioItem.find('.intro-section-portfolio').stop().fadeOut();
+        portfolioItem.find('.overlay').addClass('overlay-hide');
     });
 
     /*
