@@ -16,7 +16,7 @@ get_header();
         <div class="middle-wrap">
             <div class="middle-wrap-inner">
                 <div class="title">
-                    <h1>KWALITEITEN</h1>
+                    <h1>TIMVANDERSLIK.NL</h1>
                     <hr class="divider"/>
                 </div>
                 <div class="quote">
