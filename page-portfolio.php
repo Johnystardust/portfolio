@@ -10,8 +10,7 @@
 get_header();
 ?>
 
-<div class="portfolio-container">
-    <div class="scrollable-container">
+<div class="container-fluid page-container">
 
         <?php
         $args = array(
@@ -34,41 +33,48 @@ get_header();
                 }
                 ?>
 
-                <div class="scrollable-item portfolio-item">
-
-                    <div class="item-head" style="background-image: url(<?php echo $image[0]; ?>);">
-                        <div class="intro-section">
-                            <div class="middle-wrap">
-                                <div class="middle-wrap-inner">
-                                    <h1 class="intro-title animated"><?php echo the_title(); ?></h1>
+                <div class="portfolio-item row" style="background-image: url(<?php echo $image[0]; ?>);">
+                    <div class="middle-wrap">
+                        <div class="middle-wrap-inner">
+                            <div class="intro-section">
+                                <div class="intro-title">
+                                    <h1 class="title animated"><?php echo the_title(); ?></h1>
                                     <hr class="divider animated"/>
-                                    <h3 class="category animated">Website</h3>
+                                    <h3 class="category animated">
+                                        <?php
+                                        $categories = get_the_category();
 
-                                    <div class="intro-menu">
-                                        <div class="intro-menu-item view-case animated">
-                                            <a href="<?php echo get_permalink(); ?>">
-                                                <span class="txt"><i class="icon icon-down-open"></i>bekijk case</span>
-                                                <span class="bg"></span>
-                                            </a>
-                                        </div>
+                                        foreach($categories as $category){
+                                            echo '<span>'.esc_html($category->name).'</span>';
+                                        }
+                                        ?>
+                                    </h3>
+                                </div>
+
+                                <div class="intro-menu animated">
+                                    <div class="intro-menu-item scroll-case">
+                                        <a href="<?php echo the_permalink(); ?>">
+                                            <span class="txt"><i class="icon icon-down-open"></i>bekijk case</span>
+                                            <span class="bg"></span>
+                                        </a>
+                                    </div>
+
+                                    <div class="intro-menu-item site-link">
+                                        <a href="<?php echo get_field('site_link'); ?>" target="_blank">
+                                            <span class="txt"><i class="icon-link"></i>bekijk website</span>
+                                            <span class="bg"></span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="overlay overlay-hide"></div>
                     </div>
 
+                    <div class="overlay"></div>
                 </div>
 
             <?php
             endwhile;
-            ?>
-
-            <div class="scrollable-item footer-item">
-                <?php get_footer(); ?>
-            </div>
-
-            <?php
         }
 
         /*
@@ -87,8 +93,8 @@ get_header();
         */
         wp_reset_postdata();
         ?>
-
-    </div>
 </div>
+
+<?php get_footer(); ?>
 
 

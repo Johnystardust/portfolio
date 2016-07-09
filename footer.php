@@ -5,7 +5,6 @@
  * Website:     http://timvanderslik.nl
  */
 ?>
-</div> <!-- Wrapper closing tag -->
 
 <footer class="container-fluid">
     <div class="row">

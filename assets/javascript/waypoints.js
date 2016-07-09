@@ -4,7 +4,7 @@
 
 $(document).ready(function(){
 
-    $('.single-item-case').find('.section-item').each(function(element){
+    $('#case-section').find('.section-item').each(function(element){
 
         var id = $(this).attr('id');
 

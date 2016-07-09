@@ -5,102 +5,35 @@
 $(document).ready(function(){
 
     // Enable NiceScroll
-    $('html').niceScroll({zindex: 2000});
+    $('html').niceScroll({zindex: 9000});
 
     // Variables
     var windowWidth                 = $(window).width();
     var windowHeight                = $(window).height();
 
-    var singlePortfolioContainer    = $('#single-portfolio-container');
-    var portfolioContainer          = $('.portfolio-container');
-    var skillsContainer             = $('#skills-container');
-    var contactContainer            = $('#contact-container');
-    var scrollableContainer         = $('.scrollable-container');
-    var scrollableItem              = $('.scrollable-item');
-    var portfolioItem               = $('.portfolio-item');
-    var portfolioItemOpen           = $('.portfolio-item-open');
-
-    var itemWidth;
-    var itemCount                   = scrollableContainer.children().length;
-
     /*
      |-----------------------------------------------------------------------------------------------------------------------
-     |   Set Dimensions Function.
+     |   Set Portfolio height
      |-----------------------------------------------------------------------------------------------------------------------
      */
-    function setDimensions(){
-        // Containers
-        var containerWidth = windowWidth - 60;
+    $('#single-item-header').height(windowHeight);
 
-        singlePortfolioContainer.width(containerWidth);
-        skillsContainer.width(containerWidth);
-        contactContainer.width(containerWidth);
+    $(document).resize(function(){
+        var windowHeight                = $(window).height();
 
-        portfolioContainer.height(windowHeight);
-
-
-        // Inside the container
-        $('.item-head').height(windowHeight);
-        $('.single-item-head').height(windowHeight);
-        $('.portfolio-item-head').height(windowHeight);
-
-    }
-    setDimensions();
-
-    /*
-     |-----------------------------------------------------------------------------------------------------------------------
-     |   Set Portfolio Function.
-     |-----------------------------------------------------------------------------------------------------------------------
-     */
-    function setPortfolio(){
-        // Determine the itemWidth
-        itemWidth = portfolioContainer.width() / 3;
-
-        // Set the scrollableContainer
-        scrollableContainer.css('width', itemWidth * itemCount);
-
-        // Set niceScroll on the portfolioContainer
-        //portfolioContainer.niceScroll({zindex: 2000});
-
-        // Set the portfolioItem
-        scrollableItem.css('width', itemWidth);
-
-        var i = 0;
-        portfolioContainer.find(scrollableItem).each(function(){
-            $(this).css('left', i * itemWidth);
-            i++;
-        });
-    }
-    setPortfolio();
-
-    /*
-     |-----------------------------------------------------------------------------------------------------------------------
-     |   Set Single Portfolio Function.
-     |-----------------------------------------------------------------------------------------------------------------------
-     */
-    function setSinglePortfolio(){
-        singlePortfolioContainer.find('.intro-section').stop().fadeIn();
-        singlePortfolioContainer.find('.intro-title').addClass('fadeInDown');
-        singlePortfolioContainer.find('.divider').addClass('fadeIn');
-        singlePortfolioContainer.find('.category').addClass('fadeInUp');
-        singlePortfolioContainer.find('.site-link').addClass('fadeInUp');
-        singlePortfolioContainer.find('.scroll-case').addClass('fadeInUp');
-        singlePortfolioContainer.find('.close-project').addClass('fadeInUp');
-    }
-    setSinglePortfolio();
+        $('#single-item-header').height(windowHeight);
+    });
 
 
     /*
      |-----------------------------------------------------------------------------------------------------------------------
-     |   Portfolio Hover Function
+     |   Portfolio Item Hover
      |-----------------------------------------------------------------------------------------------------------------------
      */
+    var portfolioItem = $('.portfolio-item');
+
     portfolioItem.hover(function() {
         portfolioItem.not(this).each(function () {
-            $(this).find('.intro-title').removeClass('fadeInDown');
-            $(this).find('.divider').removeClass('fadeIn');
-            $(this).find('.category').removeClass('fadeInUp');
-            $(this).find('.intro-title').removeClass('fadeInUp');
             $(this).find('.intro-section').stop().fadeOut();
 
             $(this).find('.overlay').addClass('overlay-hide');
@@ -109,20 +42,21 @@ $(document).ready(function(){
         $(this).find('.overlay').removeClass('overlay-hide');
 
         $(this).find('.intro-section').stop().fadeIn();
-        $(this).find('.intro-title').addClass('fadeInDown');
-        $(this).find('.divider').addClass('fadeIn');
+        $(this).find('.intro-menu').addClass('fadeInUp');
+        $(this).find('.title').addClass('fadeInUp');
+        $(this).find('.divider').addClass('fadeInUp');
+
         $(this).find('.category').addClass('fadeInUp');
-        $(this).find('.view-case').addClass('fadeInUp');
     });
 
     /*
      |-----------------------------------------------------------------------------------------------------------------------
-     |   Scroll Case Click Function
+     |   View Case Click Function
      |-----------------------------------------------------------------------------------------------------------------------
      */
     $('.scroll-case').click(function(){
         $('html, body').animate({
-            scrollTop: $(".single-item-case").offset().top
+            scrollTop: $(".single-item-case").offset().top - 60
         }, 500);
 
         return false;
@@ -138,12 +72,12 @@ $(document).ready(function(){
 
     // Scroll to top fadeIn/fadeOut
     $(window).scroll(function(){
-        if ($(this).scrollTop() > (windowHeight -50)) {
+        if ($(this).scrollTop() > (windowHeight / 2)) {
             $scroll_top.removeClass('fadeOutDown');
-            $scroll_top.addClass('fadeInDown');
+            $scroll_top.addClass('fadeInUp');
             $scroll_top.show();
         } else {
-            $scroll_top.removeClass('fadeInDown');
+            $scroll_top.removeClass('fadeInUp');
             $scroll_top.addClass('fadeOutDown');
         }
     });

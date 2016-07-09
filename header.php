@@ -21,53 +21,40 @@
 
 <body>
 
-<div class="wrapper">
-
     <div id="go-to-top" class="animated">
         <i class="icon-up-open"></i>
     </div>
 
-    <div id="menu-container">
-        <div class="menu-icon-wrapper">
-            <div class="menu-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+    <div class="main-menu">
+        <?php
+        $args = array(
+            'theme_location'  => 'main-menu',
+            'menu'            => '',
+            'container'       => '',
+            'container_class' => '',
+            'container_id'    => '',
+            'menu_class'      => 'menu-container',
+            'menu_id'         => '',
+            'echo'            => true,
+            'fallback_cb'     => 'wp_page_menu',
+            'before'          => '',
+            'after'           => '<span class="bg"></span>',
+            'link_before'     => '',
+            'link_after'      => '',
+            'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+            'depth'           => 0,
+            'walker'          => ''
+        );
 
-            <div class="menu-social">
-                <ul>
-                    <li><a href="#"><i class="icon-facebook"></i></a><span class="bg"></span></li>
-                    <li><a href="#"><i class="icon-linkedin"></i></a><span class="bg"></span></li>
-                    <li><a href="#"><i class="icon-youtube"></i></a><span class="bg"></span></li>
-                    <li><a href="#"><i class="icon-twitter"></i></a><span class="bg"></span></li>
-                </ul>
-            </div>
+        wp_nav_menu($args);
+        ?>
+
+        <div class="menu-social">
+            <ul>
+                <li><a href="#"><i class="icon-facebook"></i></a><span class="bg"></span></li>
+                <li><a href="#"><i class="icon-linkedin"></i></a><span class="bg"></span></li>
+                <li><a href="#"><i class="icon-youtube"></i></a><span class="bg"></span></li>
+                <li><a href="#"><i class="icon-twitter"></i></a><span class="bg"></span></li>
+            </ul>
         </div>
-
-        <div class="main-menu">
-            <?php
-            $args = array(
-                'theme_location'  => 'main-menu',
-                'menu'            => '',
-                'container'       => '',
-                'container_class' => '',
-                'container_id'    => '',
-                'menu_class'      => 'menu-container',
-                'menu_id'         => '',
-                'echo'            => true,
-                'fallback_cb'     => 'wp_page_menu',
-                'before'          => '',
-                'after'           => '<span class="bg"></span>',
-                'link_before'     => '',
-                'link_after'      => '',
-                'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                'depth'           => 0,
-                'walker'          => ''
-            );
-
-            wp_nav_menu($args);
-            ?>
-        </div>
-
     </div>

@@ -52,6 +52,10 @@ html
   max-width: 100px
   border-color: #000000
 
+.page-container
+  position: relative
+  margin-top: 60px
+
 // Page header
 #page-header
   position: relative
@@ -60,6 +64,9 @@ html
   overflow: hidden
   padding: 0
   margin-bottom: 100px
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
   .overlay
     position: absolute
     width: 100%
@@ -71,6 +78,8 @@ html
       h1
         text-align: center
         color: #ffffff
+      .divider
+        border-color: #ffffff
     .quote
       padding: 0 120px
       p
@@ -84,9 +93,6 @@ html
         font-size: 18px
   img
     width: 100%
-
-#page-container
-  margin-left: 60px
 
 
 .middle-wrap
@@ -103,15 +109,14 @@ html
 #go-to-top
   display: table
   position: fixed
-  width: 40px
-  height: 40px
-  right: 20px
-  bottom: 20px
+  width: 60px
+  height: 60px
+  right: 0
+  bottom: 0
   z-index: 4000
   cursor: pointer
-  border-radius: 40px
-  border: 1px solid rgba(0,0,0,0.1)
-  background-color: $blue
+  background: $light-grey
+  color: #ffffff
   -webkit-transition: .3s ease-in-out
   -moz-transition: .3s ease-in-out
   -o-transition: .3s ease-in-out
@@ -129,7 +134,7 @@ html
     -o-transition: .3s ease-in-out
     transition: .3s ease-in-out
 #go-to-top:hover
-  background-color: $light-blue
+  background-color: $hover-color
   i
     top: -5px
 
