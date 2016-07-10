@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name=viewport content="width=device-width, initial-scale=1">
 
-    <title>Portfolio | Tim van der Slik</title>
+    <title>Tim van der Slik | <?php echo get_the_title(); ?></title>
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700italic,800,800italic,700' rel='stylesheet' type='text/css'>
 
@@ -25,7 +25,14 @@
         <i class="icon-up-open"></i>
     </div>
 
-    <div class="main-menu">
+    <div class="main-menu container-fluid">
+        <div class="menu-icon-wrapper">
+            <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
         <?php
         $args = array(
             'theme_location'  => 'main-menu',
@@ -53,8 +60,6 @@
             <ul>
                 <li><a href="#"><i class="icon-facebook"></i></a><span class="bg"></span></li>
                 <li><a href="#"><i class="icon-linkedin"></i></a><span class="bg"></span></li>
-                <li><a href="#"><i class="icon-youtube"></i></a><span class="bg"></span></li>
-                <li><a href="#"><i class="icon-twitter"></i></a><span class="bg"></span></li>
             </ul>
         </div>
     </div>

@@ -12,7 +12,7 @@ $light-blue : #9ad3de
 $blue : #89bdd3
 
 // Colors
-$hover-color : #b22222
+$hover-color : #EF6A1B
 $grey : #222222
 $light-grey : #333333
 
@@ -47,7 +47,6 @@ p
   font-family: 'Open Sans', sans-serif
 
 html
-  overflow: hidden !important
 
 // Set text selection color
 ::selection
@@ -73,7 +72,8 @@ html
 #page-header
   position: relative
   width: 100%
-  height: 500px
+  height: 550px
+  margin-top: 60px
   overflow: hidden
   padding: 0
   background-size: cover
@@ -88,6 +88,7 @@ html
     background-color: rgba(0,0,0,0.3)
     .title
       h1
+        text-transform: uppercase
         text-align: center
         color: #ffffff
       .divider
@@ -152,6 +153,7 @@ html
 
 @import "parts/buttons"
 @import "parts/nav"
+@import "parts/responsive"
 @import "parts/footer"
 @import "parts/home"
 @import "parts/portfolio"

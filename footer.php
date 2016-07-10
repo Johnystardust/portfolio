@@ -8,7 +8,7 @@
 
 <footer class="container-fluid">
     <div class="row footer-top">
-        <div class="col-md-3">
+        <div class="footer-column col-md-3 col-sm-6">
             <h4 class="title">Tim van der Slik</h4>
             <div class="textwidget">
                 Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
@@ -22,7 +22,7 @@
     </div>
     <div class="row footer-bottom">
         <div class="col-md-12">
-            <span><i class="icon-copyright"></i>2016 - The Drumschool <span class="credits">Design & Development by Media Critics</span></span>
+            <span><i class="icon-copyright"></i>2016 - <span class="credits">Design & Development by Tim van der Slik</span></span>
         </div>
     </div>
 </footer>

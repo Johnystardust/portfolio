@@ -10,21 +10,48 @@
 get_header();
 ?>
 
-<div id="slider-header" class="container-fluid" style="background-image: url(<?php echo get_stylesheet_directory_uri().'/assets/images/work_header.jpg'; ?>)">
-    <div class="overlay">
+<div id="slider-header" class="container-fluid">
+    <ul class="slides-container">
+        <?php
+        $i = 0;
 
-        <div class="middle-wrap">
-            <div class="middle-wrap-inner">
-                <div class="title">
-                    <h1>TIMVANDERSLIK.NL</h1>
-                    <hr class="divider"/>
-                </div>
-                <div class="quote">
-                    <p>"Embrace your differences and the qualities about you that you think are weird. <br/>Eventually, they're going to be the only things separating you from everyone else." <span class="quote-author">- Sebastian Stan</span></p>
-                </div>
-            </div>
-        </div>
+        if(have_rows('slides', 'option')){
+            while(have_rows('slides', 'option')) : the_row();
+                $image = get_sub_field('image');
+                ?>
+                <li class="slide <?php echo ($i == 0 ? 'slide-active' : ''); ?>" data-slide-index="<?php echo $i; ?>" style="background-image: url(<?php echo $image['url'] ?>)">
+                    <div class="middle-wrap">
+                        <div class="middle-wrap-inner animated fadeInUp">
+                            <div class="title">
+                                <h1><?php echo get_sub_field('title'); ?></h1>
+                                <hr class="divider hide-mobile-480"/>
+                            </div>
+                            <div class="quote hide-mobile-480">
+                                <?php echo get_sub_field('text'); ?>
+                            </div>
+                            <?php
+                            if(get_sub_field('link_url')){
+                                ?>
+                                <a href="<?php echo get_sub_field('link_url'); ?>" class="button-white"><span class="txt"><?php echo get_sub_field('link_title'); ?></span><span class="bg"></span></a>
+                                <?php
+                            }
+                            ?>
+                        </div>
+                    </div>
+                    <div class="overlay" style="opacity: <?php echo (get_sub_field('overlay_opacity') / 100 ); ?>"></div>
+                </li>
+                <?php
+                $i++;
+            endwhile;
+        }
+        ?>
+    </ul>
 
+    <div class="slides-menu">
+        <ul>
+            <li class="active-menu" data-slide-menu="0"><a href="#"><i class="icon-circle"></i></a></li>
+            <li data-slide-menu="1"><a href="#"><i class="icon-circle-empty"></i></a></li>
+        </ul>
     </div>
 </div>
 
@@ -140,6 +167,5 @@ get_header();
     wp_reset_postdata();
     ?>
 </div>
-
 
 <?php get_footer(); ?>

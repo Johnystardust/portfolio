@@ -20,6 +20,7 @@ function add_my_custom_scripts(){
     wp_register_script('nicescroll-js', get_stylesheet_directory_uri().'/assets/jquery/jquery.nicescroll.min.js');
     wp_register_script('waypoints-js', get_stylesheet_directory_uri().'/assets/waypoints/lib/jquery.waypoints.min.js');
     wp_register_script('my-javascript', get_stylesheet_directory_uri().'/assets/javascript/javascript.js');
+    wp_register_script('my-slider', get_stylesheet_directory_uri().'/assets/javascript/slider.js');
     wp_register_script('my-waypoints', get_stylesheet_directory_uri().'/assets/javascript/waypoints.js');
 
     // enqueue scripts
@@ -27,6 +28,7 @@ function add_my_custom_scripts(){
     wp_enqueue_script('nicescroll-js', '', '', '', true);
     wp_enqueue_script('waypoints-js', '', '', '', true);
     wp_enqueue_script('my-javascript', '', '', '', true);
+    wp_enqueue_script('my-slider', '', '', '', true);
     wp_enqueue_script('my-waypoints', '', '', '', true);
 }
 

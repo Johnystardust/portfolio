@@ -5,11 +5,67 @@
 $(document).ready(function(){
 
     // Enable NiceScroll
-    $('html').niceScroll({zindex: 9000});
+    //$('html').niceScroll({zindex: 9000});
 
     // Variables
     var windowWidth                 = $(window).width();
     var windowHeight                = $(window).height();
+
+    /*
+     |-------------------------------------------------------------------------------------------------------------------
+     |   Set Mobile Device Classes.
+     |-------------------------------------------------------------------------------------------------------------------
+     */
+    var deviceAgent = navigator.userAgent.toLowerCase();
+    var html        = $('html');
+
+    if (deviceAgent.match(/(iphone|ipod|ipad)/)) {
+        html.addClass('ios');
+        html.addClass('mobile');
+    }
+
+    if (deviceAgent.match(/(Windows Phone)/i)) {
+        html.addClass('windows');
+        html.addClass('mobile');
+    }
+
+    if (deviceAgent.match(/(iemobile)/i)) {
+        html.addClass('iemobile');
+        html.addClass('mobile');
+    }
+
+    if (deviceAgent.match(/android/)) {
+        html.addClass('android');
+        html.addClass('mobile');
+    }
+
+    if (deviceAgent.match(/blackberry/)) {
+        html.addClass('blackberry');
+        html.addClass('mobile');
+    }
+
+    if (deviceAgent.match(/(symbianos|^sonyericsson|^nokia|^samsung|^lg)/)) {
+        html.addClass('mobile');
+    }
+
+    /*
+     |-----------------------------------------------------------------------------------------------------------------------
+     |   IE 8 & 9 placeholder fix
+     |-----------------------------------------------------------------------------------------------------------------------
+     */
+    //$('[placeholder]').focus(function() {
+    //    var input = $(this);
+    //    if (input.val() == input.attr('placeholder')) {
+    //        input.val('');
+    //        input.removeClass('placeholder');
+    //    }
+    //}).blur(function() {
+    //    var input = $(this);
+    //    if (input.val() == '' || input.val() == input.attr('placeholder')) {
+    //        input.addClass('placeholder');
+    //        input.val(input.attr('placeholder'));
+    //    }
+    //}).blur();
 
     /*
      |-----------------------------------------------------------------------------------------------------------------------
@@ -19,7 +75,7 @@ $(document).ready(function(){
     $('#single-item-header').height(windowHeight);
 
     $(document).resize(function(){
-        var windowHeight                = $(window).height();
+        var windowHeight = $(window).height();
 
         $('#single-item-header').height(windowHeight);
     });
@@ -30,31 +86,32 @@ $(document).ready(function(){
      |   Portfolio Item Hover
      |-----------------------------------------------------------------------------------------------------------------------
      */
-    var portfolioItem = $('.portfolio-item');
+    if(!$('html').hasClass('mobile')){
+        var portfolioItem = $('.portfolio-item');
 
-    portfolioItem.find('.intro-section-portfolio').hide();
-    portfolioItem.find('.overlay').addClass('overlay-hide');
-
-
-    portfolioItem.hover(function() {
-        portfolioItem.not(this).each(function () {
-            $(this).find('.intro-section-portfolio').stop().fadeOut();
-
-            $(this).find('.overlay').addClass('overlay-hide');
-        });
-
-        $(this).find('.overlay').removeClass('overlay-hide');
-
-        $(this).find('.intro-section-portfolio').stop().fadeIn();
-        $(this).find('.intro-menu').addClass('fadeInUp');
-        $(this).find('.title').addClass('fadeInUp');
-        $(this).find('.divider').addClass('fadeInUp');
-
-        $(this).find('.category').addClass('fadeInUp');
-    }, function(){
-        portfolioItem.find('.intro-section-portfolio').stop().fadeOut();
+        portfolioItem.find('.intro-section-portfolio').hide();
         portfolioItem.find('.overlay').addClass('overlay-hide');
-    });
+
+        portfolioItem.hover(function() {
+            portfolioItem.not(this).each(function () {
+                $(this).find('.intro-section-portfolio').stop().fadeOut();
+
+                $(this).find('.overlay').addClass('overlay-hide');
+            });
+
+            $(this).find('.overlay').removeClass('overlay-hide');
+
+            $(this).find('.intro-section-portfolio').stop().fadeIn();
+            $(this).find('.intro-menu').addClass('fadeInUp');
+            $(this).find('.title').addClass('fadeInUp');
+            $(this).find('.divider').addClass('fadeInUp');
+
+            $(this).find('.category').addClass('fadeInUp');
+        }, function(){
+            portfolioItem.find('.intro-section-portfolio').stop().fadeOut();
+            portfolioItem.find('.overlay').addClass('overlay-hide');
+        });
+    }
 
     /*
      |-----------------------------------------------------------------------------------------------------------------------
@@ -102,10 +159,10 @@ $(document).ready(function(){
      */
     $('.menu-icon').click(function(){
         // Add the class to the mobile hoofdmenu
-        $('.main-menu').toggleClass('main-menu-open');
+        $('.menu-container').toggleClass('menu-container-open');
 
         // Add the class to the menu icon
-        $(this).toggleClass('open');
+        $(this).toggleClass('menu-icon-open');
     });
 
     /*
@@ -135,6 +192,8 @@ $(document).ready(function(){
      |----------------------------------------------------------------
      */
     $('#call-back-activate').click(function(){
+        $('#call-back').find('.col-md-12').addClass('call-back-open');
+
         // Start the animation to slide the intro out
         $inner_callback.addClass('bounceOutRight');
 
@@ -168,6 +227,8 @@ $(document).ready(function(){
         $button_callback.addClass('bounceOutRight');
 
         setTimeout(function(){
+            $('#call-back').find('.col-md-12').removeClass('call-back-open');
+
             // After the intro animation is stopped hide and remove the element's class
             $form_callback.hide();
             $form_callback.removeClass('bounceOutLeft');

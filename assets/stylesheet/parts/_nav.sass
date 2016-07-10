@@ -6,6 +6,57 @@
   z-index: 3000
   background-color: $grey
   border-bottom: 1px solid $light-grey
+  .menu-icon-wrapper
+    height: 60px
+    float: left
+    display: none
+    .menu-icon
+      cursor: pointer
+      height: 22px
+      width: 32px
+      position: relative
+      top: 19px
+      span
+        display: block
+        position: absolute
+        width: 32px
+        height: 4px
+        -webkit-transform: rotate(0deg)
+        -moz-transform: rotate(0deg)
+        -o-transform: rotate(0deg)
+        transform: rotate(0deg)
+        -webkit-transition: .3s ease-in-out
+        -moz-transition: .3s ease-in-out
+        -o-transition: .3s ease-in-out
+        transition: .3s ease-in-out
+        background-color: #ffffff
+      span:nth-child(1)
+        top: 0
+
+      span:nth-child(2)
+        top: 9px
+        left: 0
+
+      span:nth-child(3)
+        top: 18px
+    .menu-icon-open
+      span:nth-child(1)
+        top: 9px
+        -webkit-transform: rotate(135deg)
+        -moz-transform: rotate(135deg)
+        -o-transform: rotate(135deg)
+        transform: rotate(135deg)
+
+      span:nth-child(2)
+        opacity: 0
+        left: -60px
+
+      span:nth-child(3)
+        top: 9px
+        -webkit-transform: rotate(-135deg)
+        -moz-transform: rotate(-135deg)
+        -o-transform: rotate(-135deg)
+        transform: rotate(-135deg)
   ul
     margin: 0
     position: relative

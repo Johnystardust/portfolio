@@ -59,7 +59,7 @@ get_header();
                                         </a>
                                     </div>
 
-                                    <div class="intro-menu-item site-link">
+                                    <div class="intro-menu-item site-link hide-mobile-480">
                                         <a href="<?php echo get_field('site_link'); ?>" target="_blank">
                                             <span class="txt"><i class="icon-link"></i>bekijk website</span>
                                             <span class="bg"></span>
