@@ -10,6 +10,12 @@ h3 {
   margin: 0;
   font-weight: 300; }
 
+h4 {
+  font-size: 24px;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  font-weight: 300; }
+
 p {
   font-size: 18px;
   font-weight: 300;
@@ -291,29 +297,30 @@ html {
         width: 100%; }
 
 footer {
-  position: relative;
-  display: block;
-  height: 300px;
-  padding: 50px 0;
-  margin-left: 60px;
-  background-color: #222222; }
-  footer .footer-column {
-    display: inline-block;
-    position: relative;
-    width: 25%;
-    float: left; }
-    footer .footer-column .column-inner {
-      margin: 0 50px;
-      color: #999999; }
-      footer .footer-column .column-inner .title {
-        color: #999999;
-        font-size: 26px;
-        font-weight: 500;
-        padding-bottom: 20px; }
-      footer .footer-column .column-inner .textwidget {
-        font-weight: 300;
-        line-height: 26px;
-        letter-spacing: 0.5px; }
+  position: relative; }
+  footer .footer-top {
+    padding: 30px 0;
+    background-color: #222222; }
+  footer .title {
+    color: #999999;
+    font-weight: 500;
+    margin-bottom: 20px; }
+  footer .textwidget {
+    color: #ffffff;
+    font-weight: 300;
+    line-height: 26px;
+    letter-spacing: 0.5px; }
+    footer .textwidget span a {
+      color: #ffffff;
+      -webkit-transition: 0.3s ease-in-out;
+      -moz-transition: 0.3s ease-in-out;
+      -o-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out; }
+    footer .textwidget span a:hover {
+      color: #b22222;
+      text-decoration: none; }
+    footer .textwidget span i {
+      margin-right: 5px; }
   footer .widget_nav_menu ul {
     list-style-type: none; }
     footer .widget_nav_menu ul li {
@@ -322,7 +329,7 @@ footer {
       footer .widget_nav_menu ul li a {
         position: relative;
         left: 0;
-        color: #999999;
+        color: #ffffff;
         text-decoration: none;
         font-weight: 300;
         letter-spacing: 0.5px;
@@ -333,8 +340,14 @@ footer {
     footer .widget_nav_menu ul li:first-child {
       margin-top: 0; }
     footer .widget_nav_menu ul li:hover a {
-      color: #89bdd3;
+      color: #b22222;
       left: 10px; }
+
+.footer-bottom {
+  background: #333333;
+  padding: 15px;
+  font-size: 10px;
+  color: #999999; }
 
 #slider-header {
   position: relative;

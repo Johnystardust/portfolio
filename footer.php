@@ -7,8 +7,23 @@
 ?>
 
 <footer class="container-fluid">
-    <div class="row">
+    <div class="row footer-top">
+        <div class="col-md-3">
+            <h4 class="title">Tim van der Slik</h4>
+            <div class="textwidget">
+                Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
+                <br/><br/>
+                <span><i class="icon-phone"></i>06 25 549 538</span><br/>
+                <span><i class="icon-mail"></i><a href="mailto:info@timvanderslik.nl">info@timvanderslik.nk</a></span><br/>
+                <span><i class="icon-home"></i>Broerenstraat 39-35</span>
+            </div>
+        </div>
         <?php dynamic_sidebar('footer'); ?>
+    </div>
+    <div class="row footer-bottom">
+        <div class="col-md-12">
+            <span><i class="icon-copyright"></i>2016 - The Drumschool <span class="credits">Design & Development by Media Critics</span></span>
+        </div>
     </div>
 </footer>
 
