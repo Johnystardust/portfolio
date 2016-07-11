@@ -196,10 +196,10 @@
   position: relative
   width: 100%
   height: 60px
+  background: $light-grey
   .case-menu-item
     position: relative
-    width: 25%
-    float: left
+    padding: 0
     text-align: center
     z-index: 10
     -webkit-transition: .3s ease-in-out
@@ -217,9 +217,9 @@
       top: 0
       text-decoration: none
       text-transform: uppercase
-      background-color: #ffffff
+      background-color: $light-grey
       border-left: 1px solid rgba(0, 0, 0, 0.5)
-      color: #000000
+      color: #ffffff
       -webkit-transition: .3s ease-in-out
       -moz-transition: .3s ease-in-out
       -o-transition: .3s ease-in-out
@@ -247,7 +247,7 @@
   .case-menu-item:hover
     a
       top: -10px
-      padding-bottom: 30px !important
+      padding-bottom: 30px
       color: #ffffff
     .bg
       width: 100%

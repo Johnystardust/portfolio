@@ -27,7 +27,7 @@ get_header();
 
                 <div class="intro-menu">
 
-                    <div class="intro-menu-item">
+                    <div class="intro-menu-item hide-mobile-480">
                         <a href="<?php echo get_page_link(get_page_by_title('Portfolio')); ?>">
                             <span class="txt"><i class="icon icon-th"></i>terug</span>
                             <span class="bg"></span>
@@ -129,82 +129,79 @@ get_header();
         </div>
     </div>
 
-    <div id="case-section-review" class="container-fluid" style="background-image: url(<?php echo get_field('review_background_image'); ?>)">
-        <div class="row">
-            <div class="container">
-                <div class="row">
-                    <div class="text col-md-12">
-                        <div class="title">
-                            <h1>REFFERENTIE</h1>
-                            <hr class="divider"/>
+    <?php
+    if(get_field('review_active')){
+        ?>
+        <div id="case-section-review" class="container-fluid" style="background-image: url(<?php echo get_field('review_background_image'); ?>)">
+            <div class="row">
+                <div class="container">
+                    <div class="row">
+                        <div class="text col-md-12">
+                            <div class="title">
+                                <h1>REFFERENTIE</h1>
+                                <hr class="divider"/>
+                            </div>
+                            <?php the_field('review'); ?>
+                            <br/>
+                            <hr/>
+                            <br/>
+                            <span class="review-author"><?php echo get_field('author'); ?></span>
                         </div>
-                        <?php the_field('review'); ?>
-                        <br/>
-                        <hr/>
-                        <br/>
-                        <span class="review-author"><?php echo get_field('author'); ?></span>
                     </div>
                 </div>
+
             </div>
 
+            <div class="overlay-review"></div>
         </div>
-
-        <div class="overlay-review"></div>
-    </div>
-
-
-<?php endwhile; ?>
-
-
-<div id="single-portfolio-container">
-    <?php while ( have_posts() ) : the_post(); ?>
-
-
         <?php
-        $next_post              = get_next_post();
-        $next_permalink         = get_permalink($next_post->ID);
+    }
 
-        $prev_post              = get_previous_post();
-        $prev_permalink         = get_permalink($prev_post->ID);
 
-        $previous_adjacent_post = get_adjacent_post(true, '', true);
-        $next_adjacent_post     = get_adjacent_post(true, '', false);
-        ?>
+    $next_post              = get_next_post();
+    $next_permalink         = get_permalink($next_post->ID);
 
-        <div class="single-case-menu">
+    $prev_post              = get_previous_post();
+    $prev_permalink         = get_permalink($prev_post->ID);
 
-                <?php
-                if($previous_adjacent_post){
-                    ?>
-                    <div class="case-menu-item">
-                        <a href="<?php echo $prev_permalink; ?>">
-                            <span class="txt"><i class="icon icon-left-open"></i>Vorige</span>
-                            <span class="bg"></span>
-                        </a>
-                    </div>
-                <?php
-                }
-                else {
-                    ?>
-                    <div class="case-menu-item no-link">
-                        <a href="#">
-                            <span class="txt"><i class="icon icon-left-open"></i>Vorige</span>
-                            <span class="bg"></span>
-                        </a>
-                    </div>
-                    <?php
-                }
+    $previous_adjacent_post = get_adjacent_post(true, '', true);
+    $next_adjacent_post     = get_adjacent_post(true, '', false);
+    ?>
+
+    <div class="single-case-menu container-fluid">
+        <div class="row">
+            <?php
+            if($previous_adjacent_post){
                 ?>
+                <div class="case-menu-item col-md-3 col-sm-3">
+                    <a href="<?php echo $prev_permalink; ?>">
+                        <span class="txt"><i class="icon icon-left-open"></i>Vorige</span>
+                        <span class="bg"></span>
+                    </a>
+                </div>
+            <?php
+            }
+            else {
+                ?>
+                <div class="case-menu-item col-md-3 col-sm-3 no-link">
+                    <a href="#">
+                        <span class="txt"><i class="icon icon-left-open"></i>Vorige</span>
+                        <span class="bg"></span>
+                    </a>
+                </div>
+            <?php
+            }
+            ?>
 
 
-            <div class="case-menu-item">
+            <div class="case-menu-item col-md-3 col-sm-3">
                 <a href="#">
                     <span class="txt"><i class="icon icon-th"></i>Alle Cases</span>
                     <span class="bg"></span>
                 </a>
             </div>
 
-            <div class="case-menu-item">
+            <div class="case-menu-item col-md-3 col-sm-3">
                 <a href="<?php echo get_field('site_link'); ?>" target="_blank">
                     <span class="txt">bekijk website<i class="icon icon-link"></i></span>
                     <span class="bg"></span>
@@ -215,7 +212,7 @@ get_header();
             <?php
             if($next_adjacent_post){
                 ?>
-                <div class="case-menu-item">
+                <div class="case-menu-item col-md-3 col-sm-3">
                     <a href="<?php echo $next_permalink; ?>">
                         <span class="txt">Volgende<i class="icon icon-right-open"></i></span>
                         <span class="bg"></span>
@@ -225,7 +222,7 @@ get_header();
             }
             else {
                 ?>
-                <div class="case-menu-item no-link">
+                <div class="case-menu-item col-md-3 col-sm-3 no-link">
                     <a href="">
                         <span class="txt">Volgende<i class="icon icon-right-open"></i></span>
                         <span class="bg"></span>
@@ -235,8 +232,9 @@ get_header();
             }
             ?>
         </div>
+    </div>
 
-    <?php endwhile; ?>
 
-    <?php get_footer(); ?>
-</div>
+<?php endwhile; ?>
+
+<?php get_footer(); ?>

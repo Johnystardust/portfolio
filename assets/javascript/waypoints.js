@@ -4,21 +4,21 @@
 
 $(document).ready(function(){
 
-    $('#case-section').find('.section-item').each(function(element){
+    if(!$('html').hasClass('mobile')){
+        $('#case-section').find('.section-item').each(function(element){
 
-        var id = $(this).attr('id');
+            var id = $(this).attr('id');
 
-        new Waypoint({
-            element: $('#'+id),
-            offset: '70%',
-            handler: function(direction){
-                $('#'+id).addClass('fadeInUp');
-                $('#'+id).css('opacity', 1);
-            }
-        })
-    });
-
-
+            new Waypoint({
+                element: $('#'+id),
+                offset: '70%',
+                handler: function(direction){
+                    $('#'+id).addClass('fadeInUp');
+                    $('#'+id).css('opacity', 1);
+                }
+            })
+        });
+    }
 
     $('.skills-section').find('.skill').each(function(element){
 

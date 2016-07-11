@@ -50,25 +50,6 @@ $(document).ready(function(){
 
     /*
      |-----------------------------------------------------------------------------------------------------------------------
-     |   IE 8 & 9 placeholder fix
-     |-----------------------------------------------------------------------------------------------------------------------
-     */
-    //$('[placeholder]').focus(function() {
-    //    var input = $(this);
-    //    if (input.val() == input.attr('placeholder')) {
-    //        input.val('');
-    //        input.removeClass('placeholder');
-    //    }
-    //}).blur(function() {
-    //    var input = $(this);
-    //    if (input.val() == '' || input.val() == input.attr('placeholder')) {
-    //        input.addClass('placeholder');
-    //        input.val(input.attr('placeholder'));
-    //    }
-    //}).blur();
-
-    /*
-     |-----------------------------------------------------------------------------------------------------------------------
      |   Set Portfolio height
      |-----------------------------------------------------------------------------------------------------------------------
      */
@@ -120,7 +101,7 @@ $(document).ready(function(){
      */
     $('.scroll-case').click(function(){
         $('html, body').animate({
-            scrollTop: $(".single-item-case").offset().top - 60
+            scrollTop: $("#case-section").offset().top - 60
         }, 500);
 
         return false;

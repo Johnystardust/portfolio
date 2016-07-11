@@ -50,7 +50,7 @@ $(document).ready(function(){
             slideIndex = 0;
         }
     }
-    timer = setInterval(slide_timer, 8000);
+    timer = setInterval(slide_timer, 5000);
 
     /*
     |----------------------------------------------------------------
@@ -73,7 +73,7 @@ $(document).ready(function(){
 
         //// Restart the timer
         clearInterval(timer);
-        timer = setInterval(slide_timer, 8000);
+        timer = setInterval(slide_timer, 5000);
 
         // Call the setSlide function
         slide(slideNumber);

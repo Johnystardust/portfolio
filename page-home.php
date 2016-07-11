@@ -46,29 +46,48 @@ get_header();
         }
         ?>
     </ul>
-
-    <div class="slides-menu">
-        <ul>
-            <li class="active-menu" data-slide-menu="0"><a href="#"><i class="icon-circle"></i></a></li>
-            <li data-slide-menu="1"><a href="#"><i class="icon-circle-empty"></i></a></li>
-        </ul>
-    </div>
+    <?php
+    if($i > 1){
+        // Calculate the menu width
+        $menu_width = ($i * 30) -10;
+        ?>
+        <div class="slides-menu">
+            <ul style="width: <?php echo $menu_width; ?>px;">
+                <?php
+                /*
+                |----------------------------------------------------------------
+                |   Foreach slide render a dot.
+                |----------------------------------------------------------------
+                */
+                for ($x = 0; $x <= ($i - 1); $x++) {
+                    /*
+                    |----------------------------------------------------------------
+                    |   If $x == 0 render the active dot.
+                    |----------------------------------------------------------------
+                    */
+                    if($x == 0){
+                        echo '<li class="active-menu" data-slide-menu="'.$x.'"><i class="icon-circle"></i></li>';
+                    }
+                    else {
+                        echo '<li data-slide-menu="'.$x.'"><i class="icon-circle-empty"></i></li>';
+                    }
+                }
+                ?>
+            </ul>
+        </div>
+    <?php
+    }
+    ?>
 </div>
 
 <div class="container intro-section">
     <div class="row">
         <div class="col-md-12">
             <div class="title">
-                <h3>Welkom op mijn portfolio</h3>
+                <h3><?php echo get_field('home_title'); ?></h3>
                 <hr class="divider"/>
             </div>
-            <p>
-                Dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
-                rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
-                tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
-                laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-            </p>
+            <?php echo get_field('home_text'); ?>
         </div>
     </div>
 </div>
@@ -77,8 +96,8 @@ get_header();
     <div class="row">
         <div class="col-md-12">
             <div class="call-to-action-inner">
-                <h3>Bekijk al mijn werk</h3>
-                <a href="#" class="button-white"><span class="txt">Naar portfolio</span><span class="bg"></span></a>
+                <h3><?php echo get_field('call_to_action_title'); ?></h3>
+                <a href="<?php echo get_field('call_to_action_link'); ?>" class="button-white"><span class="txt"><?php echo get_field('call_to_action_link_name'); ?></span><span class="bg"></span></a>
             </div>
         </div>
     </div>
@@ -132,7 +151,7 @@ get_header();
                                     </a>
                                 </div>
 
-                                <div class="intro-menu-item site-link">
+                                <div class="intro-menu-item site-link hide-mobile-480">
                                     <a href="<?php echo get_field('site_link'); ?>" target="_blank">
                                         <span class="txt"><i class="icon-link"></i>bekijk website</span>
                                         <span class="bg"></span>
