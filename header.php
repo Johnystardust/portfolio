@@ -6,6 +6,7 @@
  */
 ?>
 <!DOCTYPE html>
+
 <html>
 <head lang="en">
     <meta charset="UTF-8">
@@ -59,7 +60,7 @@
         <div class="menu-social">
             <ul>
                 <li><a href="#"><i class="icon-facebook"></i></a><span class="bg"></span></li>
-                <li><a href="#"><i class="icon-linkedin"></i></a><span class="bg"></span></li>
+<!--                <li><a href="#"><i class="icon-linkedin"></i></a><span class="bg"></span></li>-->
             </ul>
         </div>
     </div>
