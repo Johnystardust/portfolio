@@ -30,7 +30,7 @@ $headerImage = get_field('header_image');
 
 <div class="container intro-section">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 text">
             <div class="title">
                 <h3><?php echo get_field('contact_title'); ?></h3>
                 <hr class="divider"/>

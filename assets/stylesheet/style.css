@@ -837,6 +837,8 @@ footer {
     #case-section .text p {
       font-size: 18px;
       font-weight: 300;
+      margin: 0 auto;
+      max-width: 790px;
       margin-top: 20px;
       line-height: 32px;
       letter-spacing: 1px; }
@@ -999,6 +1001,9 @@ footer {
     margin: 50px auto;
     max-width: 100px;
     border-color: #000000; }
+  .intro-section .text p {
+    margin: 0 auto;
+    max-width: 790px; }
   .intro-section p {
     font-size: 18px;
     font-weight: 300;
@@ -1050,6 +1055,9 @@ footer {
 .intro-section .title h3 {
   text-align: center;
   text-transform: uppercase; }
+.intro-section .text p {
+  margin: 0 auto;
+  max-width: 790px; }
 
 .contact-form {
   margin-top: 50px;

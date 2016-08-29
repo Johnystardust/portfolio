@@ -34,7 +34,7 @@ $headerImage = get_field('header_image');
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 text">
             <div class="title">
                 <h3>Mijn verhaal</h3>
                 <hr class="divider"/>
