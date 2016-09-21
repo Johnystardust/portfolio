@@ -11,6 +11,7 @@
 |----------------------------------------------------------------
 */
 include_once('custom/contact-form-widget.php');
+include_once('custom/test-widget/test-widget.php');
 
 /*
 |----------------------------------------------------------------
@@ -41,6 +42,15 @@ function tvds_add_widgets_init(){
         'id' 			=> 'footer',
         'description' 	=> __( 'Footer ruimte', 'portfolio' ),
         'before_widget' => '<div id="%1$s" class="%2$s footer-column col-md-3">',
+        'after_widget' 	=> '</div>',
+        'before_title' 	=> '<h4 class="title">',
+        'after_title' 	=> '</h4>',
+    ));
+    register_sidebar(array(
+        'name' 			=> __( 'Blog', 'portfolio' ),
+        'id' 			=> 'blog',
+        'description' 	=> __( 'Blog ruimte', 'portfolio' ),
+        'before_widget' => '<div id="%1$s" class="%2$s blog-column col-md-3">',
         'after_widget' 	=> '</div>',
         'before_title' 	=> '<h4 class="title">',
         'after_title' 	=> '</h4>',
