@@ -1,3 +1,13 @@
+.icon-php {
+  background-image: url("../../assets/images/icon-php.png");
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+.icon-js {
+  background-image: url("../../assets/images/icon-javascript.png");
+  background-position: center center;
+  background-repeat: no-repeat; }
+
 h1 {
   font-size: 52px;
   font-family: "Open Sans", sans-serif;
@@ -1013,7 +1023,7 @@ footer {
 
 .skills-section {
   position: relative;
-  margin-top: 100px; }
+  margin: 100px auto; }
   .skills-section .skill {
     margin-bottom: 50px; }
     .skills-section .skill .title {
@@ -1051,6 +1061,24 @@ footer {
           text-align: center;
           color: #ffffff;
           font-size: 20px; }
+
+#facts {
+  background: #333333; }
+  #facts .fact {
+    text-align: center;
+    color: #ffffff;
+    padding: 50px; }
+    #facts .fact h2 {
+      margin-top: 0;
+      font-weight: 300; }
+    #facts .fact h3 {
+      margin-bottom: 0;
+      font-weight: 100; }
+    #facts .fact hr {
+      max-width: 60px;
+      margin: 0 auto;
+      margin-top: 20px;
+      margin-bottom: 20px; }
 
 .intro-section .title h3 {
   text-align: center;

@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name=viewport content="width=device-width, initial-scale=1">
 
-    <title>Tim van der Slik | <?php echo get_the_title(); ?></title>
+    <title><?php echo get_the_title(); ?> | Tim van der Slik</title>
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700italic,800,800italic,700' rel='stylesheet' type='text/css'>
 

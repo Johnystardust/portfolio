@@ -11,11 +11,12 @@
         <div class="footer-column col-md-3">
             <h4 class="title">Tim van der Slik</h4>
             <div class="textwidget">
-                Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.
-                <br/><br/>
-                <span><i class="icon-phone"></i>06 25 549 538</span><br/>
-                <span><i class="icon-mail"></i><a href="mailto:info@timvanderslik.nl">info@timvanderslik.nk</a></span><br/>
-                <span><i class="icon-home"></i>Broerenstraat 39-35</span>
+                Mijn naam is Tim van der Slik en ik ben een interactieve media vormgever uit Arnhem. Ik ben 24 jaar oud en heb een passie voor het creëren van mooie thema’s en het schrijven van nette code.
+                <br/>
+                <br/>
+                <span><i class="icon-phone"></i>06 24 724 190</span><br/>
+                <span><i class="icon-mail"></i><a href="mailto:info@timvanderslik.nl">info@timvanderslik.nl</a></span><br/>
+                <span><i class="icon-home"></i>Broerenstraat 39-35 Arhem</span>
             </div>
         </div>
         <?php dynamic_sidebar('footer'); ?>
@@ -24,8 +25,8 @@
             <h4 class="title">Social</h4>
             <div class="menu-social">
                 <ul>
-                    <li><a href="#"><i class="icon-facebook"></i></a><span class="bg"></span></li>
-                    <li><a href="#"><i class="icon-linkedin"></i></a><span class="bg"></span></li>
+                    <li><a href="https://www.facebook.com/tim.vanderslik.1" target="_blank"><i class="icon-facebook"></i></a><span class="bg"></span></li>
+<!--                    <li><a href="#"><i class="icon-linkedin"></i></a><span class="bg"></span></li>-->
                 </ul>
             </div>
         </div>

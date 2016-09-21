@@ -35,6 +35,21 @@ $(document).ready(function(){
         })
     });
 
+    /*
+     |-------------------------------------------------------------------------------------------------------------------
+     |   CountUp Waypoint Function
+     |-------------------------------------------------------------------------------------------------------------------
+     */
+    var waypoint = new Waypoint({
+        element: document.getElementById('facts'),
+        handler: function() {
+            var time = $('.timer');
+
+            time.countTo('start');
+            time.removeClass('timer');
+        },
+        offset: 500
+    });
 });
 
 

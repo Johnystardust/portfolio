@@ -223,4 +223,8 @@ $(document).ready(function(){
 
         return false;
     });
+
+    $('.no-link').click(function(){
+        return false;
+    });
 });

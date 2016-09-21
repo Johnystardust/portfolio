@@ -36,73 +36,52 @@ $headerImage = get_field('header_image');
     <div class="row">
         <div class="col-md-12 text">
             <div class="title">
-                <h3>Mijn verhaal</h3>
+                <h3><?php echo get_field('skills_title'); ?></h3>
                 <hr class="divider"/>
             </div>
-            <p>
-                Dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
-                rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
-                tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
-                laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
-            </p>
+            <?php echo get_field('skills_text'); ?>
         </div>
     </div>
 </div>
 
 <div class="skills-section container">
+    <?php
+    if(have_rows('skills')){
+        $i = 1;
 
-    <div id="skill-wordpress" class="skill" data-completion="75%">
-        <div class="skill-rail">
-            <div class="fill">
-                <div class="icon">
-                    <i class="icon-wordpress"></i>
+        while(have_rows('skills')) : the_row();
+        ?>
+        <div id="skill-<?php echo $i ?>" class="skill" data-completion="<?php echo get_sub_field('completion'); ?>%">
+            <div class="skill-rail">
+                <div class="fill">
+                    <div class="icon">
+                        <i class="<?php echo get_sub_field('icon'); ?>"></i>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+        <?php
+        $i++;
+        endwhile;
+    }
+    ?>
+</div>
 
-    <div id="skill-git" class="skill" data-completion="45%">
-        <div class="skill-rail">
-            <div class="fill">
-                <div class="icon">
-                    <i class="icon-git"></i>
-                </div>
+
+<div id="facts" class="container-fluid">
+    <div class="row">
+        <?php
+        foreach(get_field('facts') as $fact){
+            ?>
+            <div class="col-md-4 fact lines">
+                <h2 class="timer" data-from="0" data-to="<?php echo $fact['number']; ?>">0</h2>
+                <hr/>
+                <h4><?php echo $fact['text']; ?></h4>
             </div>
-        </div>
+        <?php
+        }
+        ?>
     </div>
-
-    <div id="skill-php" class="skill" data-completion="68%">
-        <div class="skill-rail">
-            <div class="fill">
-                <div class="icon">
-                    <i class="icon-html5"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="skill-html" class="skill" data-completion="75%">
-        <div class="skill-rail">
-            <div class="fill">
-                <div class="icon">
-                    <i class="icon-html5"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="skill-css" class="skill" data-completion="79%">
-        <div class="skill-rail">
-            <div class="fill">
-                <div class="icon">
-                    <i class="icon-css3"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
 </div>
 
 <?php get_footer(); ?>

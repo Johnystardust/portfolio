@@ -195,7 +195,7 @@ get_header();
 
 
             <div class="case-menu-item col-md-3 col-sm-3">
-                <a href="#">
+                <a href="<?php echo get_page_link(get_page_by_title('Portfolio')); ?>">
                     <span class="txt"><i class="icon icon-th"></i>Alle Cases</span>
                     <span class="bg"></span>
                 </a>

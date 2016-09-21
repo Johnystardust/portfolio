@@ -1,4 +1,6 @@
 <?php
+/* Template Name: Blog */
+
 /**
  * Created by:  Tim van der Slik
  * Project:     Portfolio
@@ -6,7 +8,25 @@
  */
 
 get_header();
+
+$headerImage = get_field('header_image');
 ?>
+
+<div id="page-header" class="container-fluid" style="background-image: url(<?php echo $headerImage['url']; ?>)">
+    <div class="overlay">
+        <div class="middle-wrap">
+            <div class="middle-wrap-inner">
+                <div class="title">
+                    <h1><?php echo get_field('header_title'); ?></h1>
+                    <hr class="divider hide-mobile-480"/>
+                </div>
+                <div class="quote hide-mobile-480">
+                    <?php echo get_field('header_text'); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="container-fluid">
     <div class="row">
@@ -29,6 +49,3 @@ get_header();
         </div>
     </div>
 </div>
-
-<?php get_footer(); ?>
-
